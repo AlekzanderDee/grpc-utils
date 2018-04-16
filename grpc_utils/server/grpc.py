@@ -7,6 +7,7 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 
 class GRPCServer:
+    """Base gRPC server manager"""
 
     def __init__(self, max_workers=10):
         self.server = grpc.server(futures.ThreadPoolExecutor(max_workers=max_workers))
